@@ -9,8 +9,8 @@ const Cards = ({ data: {confirmed, recovered, deaths, lastUpdate} }) => {
     return 'Loading ...';
   return (
     <div className={styles.container}>
-      <Grid container spacing={3}  justify='center' >
-       <Grid 
+      <Grid container spacing={3} justify='center' >
+       <Grid
           item xs={12} md={3} 
           component={Card} 
           className={cx(styles.card, styles.infected)}>
@@ -25,7 +25,7 @@ const Cards = ({ data: {confirmed, recovered, deaths, lastUpdate} }) => {
                 />
             </Typography>
             <Typography color='textSecondary'>{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography varaint="body2">Number of active case of COVID-19</Typography>
+            <Typography varaint="body2">Số ca nhiễm COVID-19</Typography>
          </CardContent>
         </Grid>
         <Grid 
@@ -44,7 +44,7 @@ const Cards = ({ data: {confirmed, recovered, deaths, lastUpdate} }) => {
                 />
             </Typography>
             <Typography color='textSecondary'>{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography varaint="body2">Number of recoveries from COVID-19</Typography>
+            <Typography varaint="body2">Số ca hồi phục COVID-19</Typography>
           </CardContent>
         </Grid>
 
@@ -63,7 +63,7 @@ const Cards = ({ data: {confirmed, recovered, deaths, lastUpdate} }) => {
                 />
             </Typography>
             <Typography color='textSecondary'> {new Date(lastUpdate).toDateString()}</Typography>
-            <Typography varaint="body2">Number of deaths caused by COVID-19</Typography>
+            <Typography varaint="body2">Số ca tử vong COVID-19</Typography>
           </CardContent>
         </Grid>
       </Grid>
